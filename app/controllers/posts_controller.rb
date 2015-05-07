@@ -8,8 +8,8 @@ class PostsController < ApplicationController
   end
 
   def new
-    @authors = Author.all
-    @tags = Tag.all
+    @authors = Author.order(:last_name)
+    @tags = Tag.order(:name)
     @post = Post.new
   end
 

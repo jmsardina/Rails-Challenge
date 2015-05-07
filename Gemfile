@@ -12,6 +12,7 @@ gem 'non-stupid-digest-assets'
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'font-awesome-rails'
 gem 'simple_form'
+gem 'pry'
 
 group :development do
   gem 'spring'

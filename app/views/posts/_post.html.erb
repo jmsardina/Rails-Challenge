@@ -1,4 +1,7 @@
 <!-- Title -->
+<meta name="description" content="<%= post.body.split(".")[0,2]%>">
+<meta name="keywords" content="<%= post.tags.join(", ") %>">
+
 <h1><%= link_to post.header, post %></h1>
 <small><%= post.subheader %></small>
 
@@ -8,9 +11,7 @@
 </p>
 
 <hr>
-
-<p><span class="glyphicon glyphicon-time"></span> Posted on <%= post.created_at %></p>
-
+  <p><span class="glyphicon glyphicon-time"></span> Posted on <%= post.time_posted %></p>
 <hr>
 
 <p class="lead"><%= post.body.split("\n").first %></p>
