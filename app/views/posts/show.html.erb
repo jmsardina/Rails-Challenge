@@ -1,18 +1,1 @@
-<!-- Blog Post -->
-
-<!-- Title -->
-<h1><%= @post.header %></h1>
-
-<!-- Author -->
-<p class="lead">
-by <a href="#"><%= [@post.author.first_name, @post.author.last_name].join(' ') %></a>
-</p>
-
-<hr>
-
-<p><span class="glyphicon glyphicon-time"></span> Posted on August 24, 2013 at 9:00 PM</p>
-
-<hr>
-
-<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>
-<%= @post.body %>
+<%= render 'post', post: @post %>

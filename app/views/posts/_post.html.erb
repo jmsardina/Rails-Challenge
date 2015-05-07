@@ -1,18 +1,17 @@
-<!-- Blog Post -->
-
 <!-- Title -->
 <h1><%= link_to post.header, post %></h1>
+<small><%= post.subheader %></small>
 
 <!-- Author -->
 <p class="lead">
-by <a href="#"><%= [post.author.first_name, post.author.last_name].join(' ') %></a>
+  by <a href="#"><%= post.author.full_name %></a>
 </p>
 
 <hr>
 
-<p><span class="glyphicon glyphicon-time"></span> Posted on August 24, 2013 at 9:00 PM</p>
+<p><span class="glyphicon glyphicon-time"></span> Posted on <%= post.created_at %></p>
 
 <hr>
 
-<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>
+<p class="lead"><%= post.body.split("\n").first %></p>
 <%= post.body %>
