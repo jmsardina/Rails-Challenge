@@ -2,6 +2,7 @@
   <%= f.input :header %>
   <%= f.input :subheader %>
   <%= f.input :body%>
+  <%= f.input :author_id, collection: @tags, label_method: :last_name, value_method: :id %>
   <%= f.input :author_id, collection: @authors, label_method: :last_name, value_method: :id %>
   <%= f.submit class: 'btn btn-primary' %>
 <% end %>

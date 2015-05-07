@@ -1,7 +1,7 @@
 class Tag < ActiveRecord::Base
   before_save :create_short_name
-
-  has_and_belongs_to_many :posts
+  has_many :post_tags
+  has_many :posts, through: :post_tags
 
   validates :name,  presence: true,
                     length: { in: 5..50 }

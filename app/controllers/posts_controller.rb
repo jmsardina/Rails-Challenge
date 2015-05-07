@@ -9,11 +9,13 @@ class PostsController < ApplicationController
 
   def new
     @authors = Author.all
+    @tags = Tag.all
     @post = Post.new
   end
 
   def create
     @authors = Author.all
+    @tags = Tag.all
     @post = Post.new(post_params)
 
     if @post.save
@@ -25,6 +27,6 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:header, :subheader, :body, :author_id)
+    params.require(:post).permit(:header, :subheader, :body, :author_id, :tag_ids => [])
   end
 end
